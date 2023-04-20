@@ -9,4 +9,4 @@ Features Include:
 - Full Blog Post
 - Video Embedding
 
-The use of <divs> allows on the home page allows for easy scalability. 
+> The use of <code><divs></code> allows on the home page allows for easy scalability. 
