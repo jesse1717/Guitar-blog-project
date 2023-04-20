@@ -1,2 +1,12 @@
 # Guitar-blog-project
-Personal project of a mock blog. RWD Compatable
+Personal project of a mock blog.
+
+This website is a mock blog for the guitar enthusiast. 
+
+Features Include:
+- RWD Design
+- Custom Quiz
+- Full Blog Post
+- Video Embedding
+
+The use of <divs> allows on the home page allows for easy scalability. 
