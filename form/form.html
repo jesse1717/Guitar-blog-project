@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <!--Add Meta Name-->
+        <title>Jesse's Guitar Lessons | Personal Plan Quiz</title>
+        <link rel="shortcut icon" href="../images/record_yellow_ink.svg">
+        <link rel="stylesheet" href="../styles/normalize.css">
+        <link rel="stylesheet" href="../styles/form.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="../styles/slicknav.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="../js/jquery.slicknav.min.js"></script>
+	    <script type="text/javascript">
+    	    $(document).ready(function(){
+			    $('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+    	    });
+        </script>
+    </head>
+
+    <body>
+        <header>    
+            <h1><a href="../index.html">Jesse's Guitar Lessons</a></h1>
+            <nav id="mobile_menu"></nav>
+            <nav id="nav_menu">
+                <ul>
+                    <li><a href="../index.html">Home</a></li> <!-- Would remove this if it was my personal site. 
+                        I think enough people know to click the logo to return home in 2022.
+                        Especially with the logo highlighting when hovering.-->
+                    <li><a href="../blog/blog.html">Blog</a></li>
+                    <li><a href="../form/form.html" class="current">Lessons</a></li>
+                    <li><a href="../theory/theory.html">Theory</a></li>
+                    <li><a href="../reference/reference.html">Reference</a></li>
+                </ul>
+            </nav>    
+        </header>
+        <main>
+            <article>
+                <h2>About</h2>
+                <p>&ensp;&ensp;This is a quick quiz to assess your current goals, skill level, and musicianship. After compleation, an email will
+                    be sent with a customized lesson plan, your goals outlined for clarity, and more. You will also be updated if a new lesson is 
+                    created that may suit you and your goals.<br><br>&ensp;&ensp;For best results, be honest and desciptive. We use any information
+                    given to provide you the best experience possible, so clarity is essential.   
+                </p>
+                <img src="../images/record_yellow_ink.svg" alt="Record Image">
+            </article>
+            <section>
+                <h2>Lesson Plan Creation</h2> <!--Title of form-->
+                <form action="plan_request.html" method="get" id="plan_form">
+                    <fieldset>
+                        <legend>Musician Information</legend>
+                        <label for="name">*Name:</label>  <!--Name and Email (Validated and Required) (Personal Infromation Fieldset)-->
+                        <input type="text" name="name" id="name" autofocus="" required=""><br>
+                        <label for="email">*Email:</label>
+                        <input type="email" name="email" id="email" required=""><br>
+                        <label for="age">*Date of Birth:</label>  <!--Birthday (Using Date Field) (Personal Infromation Fieldset)-->
+                        <input type="date" name="date" id="date" required><br>
+                        <label for="experience">Years of Musical Experience: </label>  <!--How many years of experience (dropdown)-->
+                        <select name="experience" id="experience">
+                            <option></option>
+                            <option value="1">New Musician</option>
+                            <option value="2">1-2 Years</option>
+                            <option value="3">2-4 Years</option>
+                            <option value="4">5+ Years</option>
+                        </select><br>
+                    </fieldset>
+                    <fieldset id="fieldset2">
+                        <legend>Music Preference</legend> <!--Checkboxes for which genres do you like-->
+                        <p>Select any and all genres of music that interest you.<br>You do not have to have any prior knowledge of the genre to select it.</p>
+                        <input type="checkbox" name="genre1" id="genre1" value="pop"> 
+                        <label for="genre1">Pop</label>
+                        <input type="checkbox" name="genre2" id="genre2" value="rock"> 
+                        <label for="genre2">Rock</label>
+                        <input type="checkbox" name="genre3" id="genre3" value="jazz"> 
+                        <label for="genre3">Jazz</label>
+                        <input type="checkbox" name="genre4" id="genre4" value="funk"> 
+                        <label for="genre4">Funk</label>
+                        <input type="checkbox" name="genre5" id="genre5" value="metal"> 
+                        <label for="genre5">Metal</label><br>
+                        <input type="checkbox" name="genre6" id="genre6" value="other"> 
+                        <label for="genre6">Other (Desribe any additional genres here):</label><br>
+                        <textarea id="restriction6" placeholder="Example: Latin, Indie, etc."></textarea>
+                    </fieldset>
+                    <fieldset id="fieldset3">
+                        <legend>Player Confidence</legend> <!--Radio Buttons for Confidence (Confidence Fieldset)-->
+                        <p>How confidently can you play your pentatonic scales?</p><br>
+                        <input type="radio" name="pentatonic" id="pentatonic1" value="Not Very">
+                        <label for="pentatonic1">Not Very</label>
+                        <input type="radio" name="pentatonic" id="pentatonic2" value="Moderatly">
+                        <label for="pentatonic2">Moderatly</label>
+                        <input type="radio" name="pentatonic" id="pentatonic3" value="Very Confident">
+                        <label for="pentatonic3">Very Confident</label>
+                        <p>How confidently can you play your major scales?</p><br>
+                        <input type="radio" name="major" id="major1" value="Not Very">
+                        <label for="major1">Not Very</label>
+                        <input type="radio" name="major" id="major2" value="Moderatly">
+                        <label for="major2">Moderatly</label>
+                        <input type="radio" name="major" id="major3" value="Very Confident">
+                        <label for="major3">Very Confident</label>
+                        <p>How confidently can you play your minor scales?</p><br>
+                        <input type="radio" name="minor" id="minor1" value="Not Very">
+                        <label for="minor1">Not Very</label>
+                        <input type="radio" name="minor" id="minor2" value="Moderatly">
+                        <label for="minor2">Moderatly</label>
+                        <input type="radio" name="minor" id="minor3" value="Very Confident">
+                        <label for="minor3">Very Confident</label>
+                        <p>How confidently can you play open chords?</p><br>
+                        <input type="radio" name="oChords" id="oChords1" value="Not Very">
+                        <label for="oChords1">Not Very</label>
+                        <input type="radio" name="oChords" id="oChords2" value="Moderatly">
+                        <label for="oChords2">Moderatly</label>
+                        <input type="radio" name="oChords" id="oChords3" value="Very Confident">
+                        <label for="oChords3">Very Confident</label>
+                        <p>How confidently can you play barre chords?</p><br>
+                        <input type="radio" name="bChords" id="bChords1" value="Not Very">
+                        <label for="bChords1">Not Very</label>
+                        <input type="radio" name="bChords" id="bChords2" value="Moderatly">
+                        <label for="bChords2">Moderatly</label>
+                        <input type="radio" name="bChords" id="bChords3" value="Very Confident">
+                        <label for="bChords3">Very Confident</label>
+                    </fieldset>
+                    <fieldset id="fieldset4">
+                        <legend>Comments</legend> <!--Additional Comments (Placeholder)-->
+                        <p>Include any additional information that will help us develop a custom practice plan.<br>This may include anything from favorite player, band, questions, and more.</p>
+                        <textarea id="comments"></textarea>
+                    </fieldset>
+                    <fieldset id="fieldset5">
+                        <legend>Submit your information</legend> <!--Submit and Reset Buttons-->
+                        <input type="submit" id="submit" value="Submit Now" data-np-checked="1">
+                        <input type="reset" id="resetfourm" value="Start Over" data-np-checked="1">
+                    </fieldset>
+                </form>
+            </section>
+            <aside>
+                <h2>Recent Post</h2>
+                <ul>
+                    <a href="../reference/reference_comingSoon.html"><li>Mr. Morale & The Big Steppers Album Review</li></a>
+                    <a href="../reference/reference_comingSoon.html"><li>Who is Jacob Collier?</li></a>
+                    <a href="../reference/reference_comingSoon.html"><li>NAMM 2022 - What's New</li></a>
+                    <a href="../reference/reference_comingSoon.html"><li>Are the Dead Alive Again?</li></a>
+                </ul>
+            </aside>
+        </main>
+        <footer>
+            <p>&copy Jesse's Guitar Lessons 2022</p>
+        </footer>
+    </body>
+</html>
